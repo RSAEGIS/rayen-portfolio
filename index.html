@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rayen Chaouch — Motion Design · Graphic Design · Color Grading</title>
+<meta name="description" content="Motion designer, graphic designer and colorist. After Effects, Photoshop, Illustrator, Premiere Pro, DaVinci Resolve." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307070a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ff3c14'/%3E%3C/svg%3E" />
+<meta name="theme-color" content="#07070a" />
+<meta property="og:title" content="Rayen Chaouch — Motion Design · Graphic Design · Color Grading" />
+<meta property="og:description" content="Motion designer, graphic designer and colorist based in Tunis." />
+<meta property="og:image" content="assets/img/grade-after.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+
+<!-- ============ GRAIN + SCANLINES ============ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- ============ CURSOR ============ -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"><span class="cursor__label">VIEW</span></div>
+</div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader__inner">
+    <div class="loader__name">
+      <span>R</span><span>A</span><span>Y</span><span>E</span><span>N</span>
+      <span class="sp">&nbsp;</span>
+      <span>C</span><span>H</span><span>A</span><span>O</span><span>U</span><span>C</span><span>H</span>
+    </div>
+    <div class="loader__meta">
+      <span class="loader__role">MOTION · GRAPHIC · GRADE</span>
+      <span class="loader__count" id="loaderCount">00</span>
+    </div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+</div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo hoverable" data-cursor="hide">
+    <span class="nav__mark"></span>
+    <span class="nav__logotype">RAYEN<i>.</i></span>
+  </a>
+  <nav class="nav__links">
+    <a href="#work" class="hoverable" data-cursor="hide"><span data-i18n="nav.work">Work</span></a>
+    <a href="#reel" class="hoverable" data-cursor="hide"><span data-i18n="nav.reel">Reel</span></a>
+    <a href="#grade" class="hoverable" data-cursor="hide"><span data-i18n="nav.grade">Grading</span></a>
+    <a href="#design" class="hoverable" data-cursor="hide"><span data-i18n="nav.design">Design</span></a>
+    <a href="#tools" class="hoverable" data-cursor="hide"><span data-i18n="nav.tools">Toolkit</span></a>
+    <a href="#pricing" class="hoverable" data-cursor="hide"><span data-i18n="nav.pricing">Pricing</span></a>
+    <a href="#compare-table" class="hoverable" data-cursor="hide"><span data-i18n="nav.compare">Compare</span></a>
+    <a href="#contact" class="hoverable nav__cta" data-cursor="hide"><span data-i18n="nav.talk">Let's talk</span></a>
+  </nav>
+  <div class="lang" id="lang" role="group" aria-label="Language">
+    <button class="lang__btn is-active hoverable" data-lang="en" data-cursor="hide">EN</button>
+    <button class="lang__btn hoverable" data-lang="fr" data-cursor="hide">FR</button>
+    <button class="lang__btn hoverable" data-lang="ar" data-cursor="hide">AR</button>
+  </div>
+  <button class="nav__burger hoverable" id="burger" aria-label="Menu"><i></i><i></i></button>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="menu" id="menu">
+  <div class="menu__list">
+    <a href="#about"><em>01</em> <span data-i18n="menu.about">About</span></a>
+    <a href="#journey"><em>02</em> <span data-i18n="menu.journey">Journey</span></a>
+    <a href="#work"><em>03</em> <span data-i18n="menu.work">Work</span></a>
+    <a href="#spotlight"><em>04</em> <span data-i18n="menu.spotlight">Spotlight</span></a>
+    <a href="#reel"><em>05</em> <span data-i18n="menu.reel">Showreel</span></a>
+    <a href="#services"><em>06</em> <span data-i18n="menu.services">Services</span></a>
+    <a href="#grade"><em>07</em> <span data-i18n="menu.grade">Grading</span></a>
+    <a href="#design"><em>08</em> <span data-i18n="menu.design">Design</span></a>
+    <a href="#tools"><em>09</em> <span data-i18n="menu.tools">Toolkit</span></a>
+    <a href="#pricing"><em>10</em> <span data-i18n="menu.pricing">Packages</span></a>
+    <a href="#compare-table"><em>11</em> <span data-i18n="menu.compare">Compare</span></a>
+    <a href="#process"><em>12</em> <span data-i18n="menu.process">Process</span></a>
+    <a href="#clients"><em>13</em> <span data-i18n="menu.clients">Clients</span></a>
+    <a href="#insights"><em>14</em> <span data-i18n="menu.insights">Insights</span></a>
+    <a href="#faq"><em>15</em> <span data-i18n="menu.faq">FAQ</span></a>
+    <a href="#certs"><em>16</em> <span data-i18n="menu.certs">Certifications</span></a>
+    <a href="#radar"><em>17</em> <span data-i18n="menu.radar">Skills</span></a>
+    <a href="#bts"><em>18</em> <span data-i18n="menu.bts">Behind the scenes</span></a>
+    <a href="#playground"><em>19</em> <span data-i18n="menu.playground">Try a look</span></a>
+    <a href="#resources"><em>20</em> <span data-i18n="menu.resources">Free resources</span></a>
+    <a href="#vtestimonials"><em>21</em> <span data-i18n="menu.vtestimonials">Client videos</span></a>
+    <a href="#social"><em>22</em> <span data-i18n="menu.social">Feed</span></a>
+    <a href="#values"><em>23</em> <span data-i18n="menu.values">How I work</span></a>
+    <a href="#gear"><em>24</em> <span data-i18n="menu.gear">Gear</span></a>
+    <a href="#queue"><em>25</em> <span data-i18n="menu.queue">In progress</span></a>
+    <a href="#press"><em>26</em> <span data-i18n="menu.press">Press</span></a>
+    <a href="#estimate"><em>27</em> <span data-i18n="menu.estimate">Estimate</span></a>
+    <a href="#reach"><em>28</em> <span data-i18n="menu.reach">Reach</span></a>
+    <a href="#availability"><em>29</em> <span data-i18n="menu.availability">Booking</span></a>
+    <a href="#newsletter"><em>30</em> <span data-i18n="menu.newsletter">Newsletter</span></a>
+    <a href="#contact"><em>31</em> <span data-i18n="menu.contact">Contact</span></a>
+  </div>
+  <div class="lang lang--menu" role="group" aria-label="Language">
+    <button class="lang__btn is-active hoverable" data-lang="en">EN</button>
+    <button class="lang__btn hoverable" data-lang="fr">FR</button>
+    <button class="lang__btn hoverable" data-lang="ar">AR</button>
+  </div>
+</div>
+
+<main id="top" data-scroll-container>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__gl" id="gl"></canvas>
+    <div class="hero__vignette"></div>
+
+    <div class="hero__inner">
+      <div class="hero__top">
+        <span class="tag" data-anim="fade" data-i18n="hero.location">Tunis, TN — available for freelance</span>
+        <span class="tag tag--time" data-anim="fade"><i id="clock">--:--:--</i> GMT+1</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="line__in" data-split>MOTION</span></span>
+        <span class="line line--alt"><span class="line__in" data-split>DESIGNER</span></span>
+        <span class="line"><span class="line__in" data-split>&amp; COLORIST</span></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__desc" data-anim="fade" data-i18n="hero.desc">
+          I turn raw footage and flat brands into cinematic motion —
+          <b>After Effects</b>, <b>Premiere Pro</b>, <b>DaVinci Resolve</b>,
+          <b>Photoshop</b>, <b>Illustrator</b>.
+        </p>
+        <div class="hero__actions" data-anim="fade">
+          <a href="#work" class="btn magnetic hoverable" data-cursor="hide"><span data-i18n="hero.cta1">See the work</span></a>
+          <a href="#contact" class="btn btn--ghost magnetic hoverable" data-cursor="hide"><span data-i18n="hero.cta2">Start a project</span></a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#ticker" class="hero__scroll hoverable" data-cursor="hide">
+      <span data-i18n="hero.scroll">scroll</span><i></i>
+    </a>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <section class="ticker" id="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <div class="ticker__row">
+        <span>MOTION DESIGN</span><b>◆</b><span>COLOR GRADING</span><b>◆</b><span>BRAND IDENTITY</span><b>◆</b><span>VFX &amp; COMPOSITING</span><b>◆</b><span>KINETIC TYPE</span><b>◆</b>
+      </div>
+      <div class="ticker__row">
+        <span>MOTION DESIGN</span><b>◆</b><span>COLOR GRADING</span><b>◆</b><span>BRAND IDENTITY</span><b>◆</b><span>VFX &amp; COMPOSITING</span><b>◆</b><span>KINETIC TYPE</span><b>◆</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOW ============ -->
+  <section class="now" id="now" aria-label="Current status">
+    <div class="now__dot"></div>
+    <span class="now__label">Right now —</span>
+    <span class="now__text" id="nowText">grading a 6-part brand campaign, delivery next week</span>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__media">
+      <div class="about__sticky">
+        <div class="about__frame reveal-img tilt">
+          <img src="assets/img/about.png" alt="Colour grading suite" />
+          <span class="about__badge">REC ●</span>
+        </div>
+        <div class="about__stats">
+          <div class="stat"><h3 data-count="6">0</h3><p>years crafting frames</p></div>
+          <div class="stat"><h3 data-count="180" data-suffix="+">0</h3><p>projects delivered</p></div>
+          <div class="stat"><h3 data-count="24" data-suffix="M+">0</h3><p>views generated</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="about__text">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.about"><em>01</em> Behind the timeline</h2>
+      <p class="big" data-words>
+        I design movement. Titles that hit, transitions that breathe, grades that give a
+        story its temperature. Every project starts on paper, ends in a render queue —
+        and in between it has to feel inevitable.
+      </p>
+      <p class="muted" data-anim="fade">
+        Six years between After Effects and DaVinci Resolve, working with YouTube channels,
+        agencies and brands that need visuals people remember. Motion, identity, grade —
+        one pipeline, one person, no handoff losses.
+      </p>
+      <ul class="about__list" data-anim="stagger">
+        <li><span>Motion graphics &amp; kinetic typography</span><i>AE</i></li>
+        <li><span>Cinematic editing &amp; sound-driven pacing</span><i>PR</i></li>
+        <li><span>Color grading &amp; look development</span><i>DaVinci</i></li>
+        <li><span>Brand systems, posters &amp; thumbnails</span><i>PS / AI</i></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="journey" id="journey">
+    <div class="journey__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.journey"><em>02</em> The journey so far</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.journey.sub">Six years, one pipeline — from a first freelance gig to a studio full of retainer clients.</p>
+    </div>
+    <div class="journey__body">
+      <div class="journey__line" aria-hidden="true"><i id="journeyProgress"></i></div>
+      <ol class="journey__list">
+        <li class="journey__item">
+          <span class="journey__year">2020</span>
+          <h3>First paid edit</h3>
+          <p>A 90-second product cut for a local brand — the one that proved this could be a job, not a hobby.</p>
+        </li>
+        <li class="journey__item">
+          <span class="journey__year">2021</span>
+          <h3>Moved into motion design</h3>
+          <p>Traded straight cuts for kinetic type and shape animation — After Effects became the daily driver.</p>
+        </li>
+        <li class="journey__item">
+          <span class="journey__year">2022</span>
+          <h3>Picked up color grading</h3>
+          <p>DaVinci Resolve joined the pipeline; clients started asking for the full package instead of splitting it across two people.</p>
+        </li>
+        <li class="journey__item">
+          <span class="journey__year">2023</span>
+          <h3>First agency retainer</h3>
+          <p>A monthly slot for a growing YouTube channel — steady work, tighter turnarounds, a sharper pipeline.</p>
+        </li>
+        <li class="journey__item">
+          <span class="journey__year">2024</span>
+          <h3>180+ projects shipped</h3>
+          <p>Motion, grade and brand work across agencies, creators and small studios — one pipeline, no handoff losses.</p>
+        </li>
+        <li class="journey__item">
+          <span class="journey__year">2026</span>
+          <h3>Refining the craft — and the page it lives on</h3>
+          <p>Still shipping, still tightening the pipeline, still chasing the frame that makes people stop scrolling.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="work" id="work">
+    <div class="work__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.work"><em>03</em> Selected work</h2>
+      <div class="work__filters" id="filters">
+        <button class="chip is-active hoverable" data-filter="all">All</button>
+        <button class="chip hoverable" data-filter="motion">Motion</button>
+        <button class="chip hoverable" data-filter="grade">Grading</button>
+        <button class="chip hoverable" data-filter="brand">Brand</button>
+      </div>
+    </div>
+
+    <div class="work__list" id="workList">
+      <a class="row hoverable" data-cursor="view" data-cat="motion" data-media="assets/vid/w1.mp4" href="#contact">
+        <span class="row__idx">01</span>
+        <h3 class="row__title">[Project name 01]</h3>
+        <span class="row__meta">Title sequence · After Effects</span>
+        <span class="row__year"><span class="sr-only"> — </span>2026</span>
+      </a>
+      <a class="row hoverable" data-cursor="view" data-cat="grade" data-media="assets/vid/w2.mp4" href="#contact">
+        <span class="row__idx">02</span>
+        <h3 class="row__title">[Project name 02]</h3>
+        <span class="row__meta">Documentary grade · DaVinci Resolve</span>
+        <span class="row__year"><span class="sr-only"> — </span>2025</span>
+      </a>
+      <a class="row hoverable" data-cursor="view" data-cat="brand" data-media="assets/vid/w3.mp4" href="#contact">
+        <span class="row__idx">03</span>
+        <h3 class="row__title">[Project name 03]</h3>
+        <span class="row__meta">Identity in motion · Illustrator + AE</span>
+        <span class="row__year"><span class="sr-only"> — </span>2025</span>
+      </a>
+      <a class="row hoverable" data-cursor="view" data-cat="motion" data-media="assets/vid/w4.mp4" href="#contact">
+        <span class="row__idx">04</span>
+        <h3 class="row__title">[Project name 04]</h3>
+        <span class="row__meta">Music visual · Compositing</span>
+        <span class="row__year"><span class="sr-only"> — </span>2025</span>
+      </a>
+      <a class="row hoverable" data-cursor="view" data-cat="grade" data-media="assets/vid/w5.mp4" href="#contact">
+        <span class="row__idx">05</span>
+        <h3 class="row__title">[Project name 05]</h3>
+        <span class="row__meta">Travel film · Edit &amp; grade</span>
+        <span class="row__year"><span class="sr-only"> — </span>2024</span>
+      </a>
+      <a class="row hoverable" data-cursor="view" data-cat="brand" data-media="assets/vid/w6.mp4" href="#contact">
+        <span class="row__idx">06</span>
+        <h3 class="row__title">[Project name 06]</h3>
+        <span class="row__meta">Product promo · Photoshop + AE</span>
+        <span class="row__year"><span class="sr-only"> — </span>2024</span>
+      </a>
+    </div>
+
+    <div class="work__preview" id="preview" aria-hidden="true">
+      <video id="previewVideo" muted loop playsinline></video>
+    </div>
+  </section>
+
+  <!-- ============ SPOTLIGHT (case study) ============ -->
+  <section class="spotlight" id="spotlight">
+    <div class="spotlight__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.spotlight"><em>04</em> Case study</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.spotlight.sub">One project, start to finish — how a single product shot became a three-platform launch.</p>
+    </div>
+    <div class="spotlight__body">
+      <div class="spotlight__media reveal-img tilt">
+        <img src="assets/img/w2.jpg" alt="Campaign key art frame" />
+        <span class="spotlight__tag">[Project name] — 2024</span>
+      </div>
+      <div class="spotlight__text">
+        <p class="muted" data-anim="fade">
+          The brief: turn a single product shot into a launch campaign that could carry a
+          paid media push across three platforms in under two weeks — key art, motion and
+          cutdowns, all from one pipeline.
+        </p>
+        <ol class="spotlight__steps" data-anim="stagger">
+          <li><span>01</span><div><h3>Key art in Photoshop</h3><p>Hero composite and three alternate crops built before a single frame moved.</p></div></li>
+          <li><span>02</span><div><h3>Kinetic type in After Effects</h3><p>Type rig built once, driven by expressions so a longer headline never broke it.</p></div></li>
+          <li><span>03</span><div><h3>Cut for three aspect ratios</h3><p>16:9, 1:1 and 9:16 delivered from one AE project — no separate re-animation.</p></div></li>
+        </ol>
+        <div class="spotlight__stats">
+          <div class="stat"><h3 data-count="9">0</h3><p>days, brief to delivery</p></div>
+          <div class="stat"><h3 data-count="3">0</h3><p>aspect ratios shipped</p></div>
+          <div class="stat"><h3 data-count="41" data-suffix="%">0</h3><p>lift in click-through</p></div>
+        </div>
+        <a href="#work" class="btn btn--ghost magnetic hoverable" data-cursor="hide"><span>See it in the work list</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOWREEL (scroll-scrubbed) ============ -->
+  <section class="reel" id="reel">
+    <div class="reel__pin" id="reelPin">
+      <video class="reel__video" id="reelVideo" src="assets/vid/reel.mp4" muted playsinline preload="auto"></video>
+      <div class="reel__shade"></div>
+
+      <div class="reel__copy">
+        <span class="tag">Showreel — 2026 · scroll to scrub</span>
+        <h2 class="reel__title">
+          <span class="line"><span class="line__in" data-split>SHOW</span></span>
+          <span class="line line--alt"><span class="line__in" data-split>REEL</span></span>
+        </h2>
+        <div class="reel__meta">
+          <span>01:42</span><span>4K · ProRes</span><span>Motion · Edit · Grade</span>
+        </div>
+      </div>
+
+      <button class="reel__play hoverable" id="reelPlay" data-cursor="hide" aria-label="Play the reel">
+        <i></i><span>play</span>
+      </button>
+
+      <div class="reel__bar"><i id="reelBar"></i></div>
+      <div class="reel__frames" aria-hidden="true">
+        <span>REC ●</span><span id="reelTc">00:00:00:00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (horizontal) ============ -->
+  <section class="services" id="services">
+    <div class="services__pin" id="servicesPin">
+      <div class="services__head">
+        <h2 class="sec-title" data-i18n-title="sec.services"><em>06</em> What I do</h2>
+        <span class="services__hint">drag / scroll →</span>
+      </div>
+      <div class="services__track" id="servicesTrack">
+        <article class="card">
+          <span class="card__no">01</span>
+          <h3>Motion Design</h3>
+          <p>Title sequences, kinetic typography, logo animation, infographics and 2.5D camera work built frame-accurate in After Effects.</p>
+          <ul><li>After Effects</li><li>Expressions</li><li>Shape layers</li></ul>
+        </article>
+        <article class="card">
+          <span class="card__no">02</span>
+          <h3>Editing</h3>
+          <p>Story-first cuts with aggressive pacing and sound design — YouTube docs, ads, aftermovies, long-form retention edits.</p>
+          <ul><li>Premiere Pro</li><li>Audition</li><li>Sound design</li></ul>
+        </article>
+        <article class="card">
+          <span class="card__no">03</span>
+          <h3>Color Grading</h3>
+          <p>Primary + secondary correction, custom looks and LUTs, skin-tone protection and film emulation in DaVinci Resolve.</p>
+          <ul><li>DaVinci Resolve</li><li>Custom LUTs</li><li>Film emulation</li></ul>
+        </article>
+        <article class="card">
+          <span class="card__no">04</span>
+          <h3>Graphic Design</h3>
+          <p>Visual identity, posters, key art and thumbnails that survive at 120×90 px — designed in Photoshop and Illustrator.</p>
+          <ul><li>Photoshop</li><li>Illustrator</li><li>Brand kits</li></ul>
+        </article>
+        <article class="card card--cta">
+          <h3>Got something<br />in mind?</h3>
+          <a href="#contact" class="btn magnetic hoverable" data-cursor="hide"><span>Let's build it</span></a>
+        </article>
+      </div>
+      <div class="services__progress"><i id="servicesProgress"></i></div>
+    </div>
+  </section>
+
+  <!-- ============ GRADE COMPARE ============ -->
+  <section class="grade" id="grade">
+    <div class="grade__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.grade"><em>07</em> Color grading</h2>
+      <p data-anim="fade">Drag the handle. Left is the flat log file straight off the camera, right is the final look.</p>
+    </div>
+    <div class="compare" id="compare">
+      <img class="compare__after" src="assets/img/grade-after.jpg" alt="Graded frame" draggable="false" />
+      <div class="compare__before" id="compareBefore">
+        <img src="assets/img/grade-raw.jpg" alt="Raw log frame" draggable="false" />
+      </div>
+      <span class="compare__tag compare__tag--l">LOG / RAW</span>
+      <span class="compare__tag compare__tag--r">GRADED</span>
+      <div class="compare__handle" id="compareHandle"><i></i><span>↔</span></div>
+    </div>
+  </section>
+
+  <!-- ============ DESIGN / VECTOR GALLERY ============ -->
+  <section class="gal" id="design">
+    <div class="gal__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.design"><em>08</em> Design &amp; vectors</h2>
+      <p class="gal__intro" data-anim="fade">
+        Posters, identities, key art and icon systems. Everything is drawn as vectors in
+        Illustrator first — so the same artwork prints at A0, sits in a thumbnail, and animates
+        in After Effects without a single redraw.
+      </p>
+    </div>
+
+    <div class="gal__cols" id="galCols">
+      <div class="gal__col" data-gspeed="-14">
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g1.jpg">
+          <img src="assets/img/g1.jpg" alt="Poster system" loading="lazy" />
+          <figcaption><b>Ai</b> Poster system</figcaption>
+        </figure>
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g2.jpg">
+          <img src="assets/img/g2.jpg" alt="Brand identity" loading="lazy" />
+          <figcaption><b>Ai</b> Identity kit</figcaption>
+        </figure>
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g3.jpg">
+          <img src="assets/img/g3.jpg" alt="Abstract render" loading="lazy" />
+          <figcaption><b>Ps</b> Key art</figcaption>
+        </figure>
+      </div>
+
+      <div class="gal__col gal__col--mid" data-gspeed="12">
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g4.jpg">
+          <img src="assets/img/g4.jpg" alt="Vector artwork" loading="lazy" />
+          <figcaption><b>Ai</b> Vector artwork</figcaption>
+        </figure>
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g5.jpg">
+          <img src="assets/img/g5.jpg" alt="Type poster" loading="lazy" />
+          <figcaption><b>Ai</b> Custom lettering</figcaption>
+        </figure>
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g6.jpg">
+          <img src="assets/img/g6.jpg" alt="Logo process" loading="lazy" />
+          <figcaption><b>Ai</b> Logo construction</figcaption>
+        </figure>
+      </div>
+
+      <div class="gal__col" data-gspeed="-9">
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g7.jpg">
+          <img src="assets/img/g7.jpg" alt="Cover art" loading="lazy" />
+          <figcaption><b>Ps</b> Cover art</figcaption>
+        </figure>
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/g8.jpg">
+          <img src="assets/img/g8.jpg" alt="Texture study" loading="lazy" />
+          <figcaption><b>Ps</b> Texture study</figcaption>
+        </figure>
+        <figure class="gal__item hoverable" data-cursor="view" data-full="assets/img/w3.jpg">
+          <img src="assets/img/w3.jpg" alt="Identity in motion" loading="lazy" />
+          <figcaption><b>Ai + Ae</b> Identity in motion</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLS ============ -->
+  <section class="tools" id="tools">
+    <div class="tools__marquee">
+      <div class="tools__row">
+        <span>After Effects</span><b>/</b><span>Premiere Pro</span><b>/</b><span>DaVinci Resolve</span><b>/</b><span>Photoshop</span><b>/</b><span>Illustrator</span><b>/</b><span>Audition</span><b>/</b>
+        <span>After Effects</span><b>/</b><span>Premiere Pro</span><b>/</b><span>DaVinci Resolve</span><b>/</b><span>Photoshop</span><b>/</b><span>Illustrator</span><b>/</b><span>Audition</span><b>/</b>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="stack__head">
+        <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.tools"><em>09</em> The toolkit</h2>
+        <p class="stack__intro" data-anim="fade">
+          Six years inside the Adobe suite and DaVinci Resolve. One pipeline — vectors drawn in
+          Illustrator, textures built in Photoshop, animated in After Effects, cut in Premiere,
+          graded in Resolve.
+        </p>
+      </div>
+
+      <div class="stack__grid" data-anim="stagger">
+        <article class="soft soft--ae">
+          <span class="soft__mono">Ae</span>
+          <div class="soft__body">
+            <h3>After Effects</h3>
+            <p>Kinetic type, shape-layer rigs, expressions, 2.5D camera, tracking and clean-up compositing.</p>
+            <ul class="soft__tags"><li>Expressions</li><li>Rigging</li><li>Compositing</li></ul>
+          </div>
+          <div class="soft__meter"><i style="--lvl:96%"></i><span data-count="96" data-suffix="%">0%</span></div>
+        </article>
+
+        <article class="soft soft--ai">
+          <span class="soft__mono">Ai</span>
+          <div class="soft__body">
+            <h3>Illustrator</h3>
+            <p>Where every identity starts: logo construction on a grid, custom lettering, icon systems
+              and vector artwork built clean so it animates straight in After Effects without redraws.</p>
+            <ul class="soft__tags"><li>Logo design</li><li>Lettering</li><li>Icon systems</li><li>AE-ready vectors</li></ul>
+          </div>
+          <div class="soft__meter"><i style="--lvl:93%"></i><span data-count="93" data-suffix="%">0%</span></div>
+        </article>
+
+        <article class="soft soft--ps">
+          <span class="soft__mono">Ps</span>
+          <div class="soft__body">
+            <h3>Photoshop</h3>
+            <p>Key art, posters, thumbnails, matte painting and texture work — retouch that survives a 4K crop.</p>
+            <ul class="soft__tags"><li>Key art</li><li>Retouch</li><li>Textures</li></ul>
+          </div>
+          <div class="soft__meter"><i style="--lvl:94%"></i><span data-count="94" data-suffix="%">0%</span></div>
+        </article>
+
+        <article class="soft soft--pr">
+          <span class="soft__mono">Pr</span>
+          <div class="soft__body">
+            <h3>Premiere Pro</h3>
+            <p>Long-form assembly, retention-driven pacing, multicam, subtitles and platform-ready exports.</p>
+            <ul class="soft__tags"><li>Pacing</li><li>Multicam</li><li>Delivery</li></ul>
+          </div>
+          <div class="soft__meter"><i style="--lvl:95%"></i><span data-count="95" data-suffix="%">0%</span></div>
+        </article>
+
+        <article class="soft soft--dv">
+          <span class="soft__mono">Dv</span>
+          <div class="soft__body">
+            <h3>DaVinci Resolve</h3>
+            <p>Node-based primaries, power windows, skin-tone protection, custom LUTs and film emulation.</p>
+            <ul class="soft__tags"><li>Node grading</li><li>LUTs</li><li>Film look</li></ul>
+          </div>
+          <div class="soft__meter"><i style="--lvl:92%"></i><span data-count="92" data-suffix="%">0%</span></div>
+        </article>
+
+        <article class="soft soft--au">
+          <span class="soft__mono">Au</span>
+          <div class="soft__body">
+            <h3>Audition</h3>
+            <p>Dialogue clean-up, de-noise, mix balance and sound design that the cut can lean on.</p>
+            <ul class="soft__tags"><li>De-noise</li><li>Mixing</li><li>SFX</li></ul>
+          </div>
+          <div class="soft__meter"><i style="--lvl:85%"></i><span data-count="85" data-suffix="%">0%</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing" id="pricing">
+    <div class="pricing__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.pricing"><em>10</em> Packages</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.pricing.sub">Fixed-scope packages for the most requested projects — custom quotes for anything bigger.</p>
+    </div>
+
+    <div class="pricing__grid" data-anim="stagger">
+      <article class="plan tilt">
+        <span class="plan__tag">Starter</span>
+        <div class="plan__price"><span>350</span><small>USD / video</small></div>
+        <p>A single title sequence or a 60-second social cut, graded and delivered in every ratio you need.</p>
+        <ul class="plan__list">
+          <li>Up to 60s runtime</li>
+          <li>1 round of motion design</li>
+          <li>Basic color grade</li>
+          <li>16:9 + 9:16 exports</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost magnetic hoverable" data-cursor="hide"><span>Start here</span></a>
+      </article>
+
+      <article class="plan plan--pop tilt">
+        <span class="plan__badge">Most booked</span>
+        <span class="plan__tag">Studio</span>
+        <div class="plan__price"><span>950</span><small>USD / project</small></div>
+        <p>Full edit, motion graphics and a custom grade for long-form content or a brand campaign.</p>
+        <ul class="plan__list">
+          <li>Up to 10 min runtime</li>
+          <li>Kinetic type &amp; VFX</li>
+          <li>Custom LUT + look dev</li>
+          <li>2 rounds of revisions</li>
+          <li>All platform exports</li>
+        </ul>
+        <a href="#contact" class="btn magnetic hoverable" data-cursor="hide"><span>Start here</span></a>
+      </article>
+
+      <article class="plan tilt">
+        <span class="plan__tag">Pipeline</span>
+        <div class="plan__price"><span>Custom</span><small>monthly retainer</small></div>
+        <p>Ongoing motion, edit and grade for channels and agencies shipping content every week.</p>
+        <ul class="plan__list">
+          <li>Dedicated turnaround slots</li>
+          <li>Brand system maintained</li>
+          <li>Priority scheduling</li>
+          <li>Unlimited light revisions</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost magnetic hoverable" data-cursor="hide"><span>Let's talk</span></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section class="compare-table" id="compare-table">
+    <div class="compare-table__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.compare"><em>11</em> Why not just hire an agency</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.compare.sub">Same three skills, no handoffs between them, no account manager in the middle.</p>
+    </div>
+    <div class="compare-table__grid" data-anim="stagger">
+      <div class="ctable__row ctable__row--head">
+        <span></span>
+        <span>Generalist freelancer</span>
+        <span class="ctable__me">Rayen</span>
+        <span>Full agency</span>
+      </div>
+      <div class="ctable__row">
+        <span>Motion, grade &amp; brand in one pipeline</span>
+        <span class="no">—</span>
+        <span class="yes">✓</span>
+        <span class="no">— (split across teams)</span>
+      </div>
+      <div class="ctable__row">
+        <span>You talk directly to who's editing</span>
+        <span class="yes">✓</span>
+        <span class="yes">✓</span>
+        <span class="no">— (through an AM)</span>
+      </div>
+      <div class="ctable__row">
+        <span>Typical turnaround</span>
+        <span>Varies</span>
+        <span class="ctable__me">3–10 days</span>
+        <span>2–4 weeks</span>
+      </div>
+      <div class="ctable__row">
+        <span>Consistent visual language across deliverables</span>
+        <span class="no">—</span>
+        <span class="yes">✓</span>
+        <span class="yes">✓</span>
+      </div>
+      <div class="ctable__row">
+        <span>Retainer &amp; monthly slots available</span>
+        <span class="no">—</span>
+        <span class="yes">✓</span>
+        <span class="yes">✓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="process" id="process">
+    <div class="process__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.process"><em>12</em> The pipeline</h2>
+    </div>
+    <div class="steps">
+      <span class="steps__line"><i id="stepsLine"></i></span>
+      <div class="step">
+        <span class="step__no">01</span>
+        <h3>Brief &amp; direction</h3>
+        <p>References, moodboard, pacing plan. We agree on the feeling before a single keyframe exists.</p>
+      </div>
+      <div class="step">
+        <span class="step__no">02</span>
+        <h3>Cut &amp; rhythm</h3>
+        <p>Assembly, selects, sound-led pacing. The edit locks so motion never fights the story.</p>
+      </div>
+      <div class="step">
+        <span class="step__no">03</span>
+        <h3>Motion &amp; VFX</h3>
+        <p>Type, graphics, compositing and camera moves — designed as a system, not one-off layers.</p>
+      </div>
+      <div class="step">
+        <span class="step__no">04</span>
+        <h3>Grade &amp; deliver</h3>
+        <p>Look development, cleanup, mastering and exports for every platform you need.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLIENTS & RECOGNITION ============ -->
+  <section class="clients" id="clients">
+    <div class="clients__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.clients"><em>13</em> Clients &amp; recognition</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.clients.sub">Channels, agencies and brands I've cut, animated and graded for.</p>
+    </div>
+
+    <div class="logos" data-anim="stagger">
+      <span class="logos__cell">[Client 01]</span>
+      <span class="logos__cell">[Client 02]</span>
+      <span class="logos__cell">[Client 03]</span>
+      <span class="logos__cell">[Client 04]</span>
+      <span class="logos__cell">[Client 05]</span>
+      <span class="logos__cell">[Client 06]</span>
+      <span class="logos__cell">[Client 07]</span>
+      <span class="logos__cell">[Client 08]</span>
+    </div>
+
+    <ul class="awards">
+      <li class="award">
+        <span class="award__yr">2026</span>
+        <span class="award__ttl">[Award / recognition title]</span>
+        <span class="award__by">[Awarding body]</span>
+      </li>
+      <li class="award">
+        <span class="award__yr">2025</span>
+        <span class="award__ttl">[Award / recognition title]</span>
+        <span class="award__by">[Awarding body]</span>
+      </li>
+      <li class="award">
+        <span class="award__yr">2025</span>
+        <span class="award__ttl">[Award / recognition title]</span>
+        <span class="award__by">[Awarding body]</span>
+      </li>
+    </ul>
+
+    <div class="kpi" data-anim="stagger">
+      <div class="kpi__cell"><h3 data-count="180" data-suffix="+">0</h3><p>projects delivered</p></div>
+      <div class="kpi__cell"><h3 data-count="24" data-suffix="M+">0</h3><p>views generated</p></div>
+      <div class="kpi__cell"><h3 data-count="11">0</h3><p>countries</p></div>
+      <div class="kpi__cell"><h3 data-count="98" data-suffix="%">0</h3><p>repeat clients</p></div>
+    </div>
+  </section>
+
+  <!-- ============ INSIGHTS ============ -->
+  <section class="insights" id="insights">
+    <div class="insights__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.insights"><em>14</em> Notes from the timeline</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.insights.sub">Short write-ups on motion, grading and the pipeline behind the work.</p>
+    </div>
+    <div class="insights__grid" data-anim="stagger">
+      <article class="note tilt">
+        <span class="note__tag">Grading</span>
+        <h3>Why flat log footage always grades better</h3>
+        <p>The case for shooting log even when the deadline says there's no time to grade properly.</p>
+        <span class="note__meta">6 min read · 2026</span>
+      </article>
+      <article class="note tilt">
+        <span class="note__tag">Motion</span>
+        <h3>Building type rigs that survive a last-minute copy change</h3>
+        <p>An expression-driven approach to kinetic type that doesn't break when the headline gets longer.</p>
+        <span class="note__meta">5 min read · 2025</span>
+      </article>
+      <article class="note tilt">
+        <span class="note__tag">Pipeline</span>
+        <h3>One person, three roles: keeping motion, grade and brand consistent</h3>
+        <p>How a single-pipeline workflow avoids the "translation loss" of handing a project between specialists.</p>
+        <span class="note__meta">4 min read · 2025</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="faq__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.faq"><em>15</em> Good to know</h2>
+    </div>
+    <div class="acc" id="acc">
+      <div class="acc__item">
+        <button class="acc__q hoverable" data-cursor="hide"><span>How long does a project take?</span><i></i></button>
+        <div class="acc__a"><p>A 60-second motion piece usually runs 5–8 working days from locked brief to master.
+          Long-form edits and full grades depend on footage volume — you get a dated schedule before we start.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q hoverable" data-cursor="hide"><span>What do you need from me to start?</span><i></i></button>
+        <div class="acc__a"><p>Footage or a script, brand assets (logo in vector if you have it), references you like,
+          and the delivery formats. If the logo only exists as a PNG I redraw it in Illustrator first.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q hoverable" data-cursor="hide"><span>How many revisions are included?</span><i></i></button>
+        <div class="acc__a"><p>Two full rounds are included at every stage — direction, animation, grade. Anything beyond
+          that is billed by the hour, and I always tell you before it gets there.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q hoverable" data-cursor="hide"><span>Do you work with teams abroad?</span><i></i></button>
+        <div class="acc__a"><p>Yes — I'm in Tunis (GMT+1) and work daily with clients in Europe, the Gulf and North America.
+          Frame.io or Drive for reviews, whichever your team already uses.</p></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q hoverable" data-cursor="hide"><span>What do you deliver at the end?</span><i></i></button>
+        <div class="acc__a"><p>Masters for every platform (16:9, 9:16, 1:1), subtitles, thumbnails, and the project files
+          or a reusable After Effects template if you want to keep iterating in-house.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="says">
+    <div class="says__track">
+      <blockquote><p>“[Add a real client testimonial here.]”</p><cite>[Client name] — [Role, company]</cite></blockquote>
+      <blockquote><p>“[Add a real client testimonial here.]”</p><cite>[Client name] — [Role, company]</cite></blockquote>
+      <blockquote><p>“[Add a real client testimonial here.]”</p><cite>[Client name] — [Role, company]</cite></blockquote>
+      <blockquote><p>“[Add a real client testimonial here.]”</p><cite>[Client name] — [Role, company]</cite></blockquote>
+      <blockquote><p>“[Add a real client testimonial here.]”</p><cite>[Client name] — [Role, company]</cite></blockquote>
+      <blockquote><p>“[Add a real client testimonial here.]”</p><cite>[Client name] — [Role, company]</cite></blockquote>
+    </div>
+  </section>
+  
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="certs" id="certs">
+    <div class="certs__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.certs"><em>16</em> Certifications &amp; training</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.certs.sub">Formal credentials behind the six years — the software badges above are muscle memory, these are the paper trail.</p>
+    </div>
+    <div class="certs__grid" data-anim="stagger">
+      <article class="cert tilt">
+        <span class="cert__mark">Ae</span>
+        <h3>Adobe Certified Professional</h3>
+        <p>Video Design using Adobe After Effects</p>
+        <span class="cert__yr">2023</span>
+      </article>
+      <article class="cert tilt">
+        <span class="cert__mark">Dv</span>
+        <h3>DaVinci Resolve Colorist</h3>
+        <p>Blackmagic Design — color grading certification</p>
+        <span class="cert__yr">2022</span>
+      </article>
+      <article class="cert tilt">
+        <span class="cert__mark">Ai</span>
+        <h3>Adobe Certified Professional</h3>
+        <p>Graphic Design &amp; Illustration using Illustrator</p>
+        <span class="cert__yr">2021</span>
+      </article>
+      <article class="cert tilt">
+        <span class="cert__mark">Mo</span>
+        <h3>Motion Design Bootcamp</h3>
+        <p>Advanced kinetic typography &amp; expressions</p>
+        <span class="cert__yr">2021</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS RADAR ============ -->
+  <section class="radar-sec" id="radar">
+    <div class="radar-sec__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.radar"><em>17</em> Skills breakdown</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.radar.sub">Six disciplines, one pipeline. Where the hours actually go.</p>
+    </div>
+    <div class="radar-sec__body">
+      <div class="radar" id="radarChart">
+        <svg viewBox="0 0 400 400" id="radarSvg">
+          <g class="radar__grid">
+            <polygon points="200,40 351,120 351,280 200,360 49,280 49,120"></polygon>
+            <polygon points="200,93 275.5,133 275.5,267 200,307 124.5,267 124.5,133"></polygon>
+            <line x1="200" y1="200" x2="200" y2="40"></line>
+            <line x1="200" y1="200" x2="351" y2="120"></line>
+            <line x1="200" y1="200" x2="351" y2="280"></line>
+            <line x1="200" y1="200" x2="200" y2="360"></line>
+            <line x1="200" y1="200" x2="49" y2="280"></line>
+            <line x1="200" y1="200" x2="49" y2="120"></line>
+          </g>
+          <polygon class="radar__shape" id="radarShape" points="200,52 335,128 330,272 200,352 90,270 65,124"></polygon>
+          <g class="radar__labels">
+            <text x="200" y="24">Motion</text>
+            <text x="366" y="115" text-anchor="start">Grade</text>
+            <text x="366" y="288" text-anchor="start">Edit</text>
+            <text x="200" y="384" text-anchor="middle">Design</text>
+            <text x="34" y="288" text-anchor="end">Sound</text>
+            <text x="34" y="115" text-anchor="end">Brand</text>
+          </g>
+        </svg>
+      </div>
+      <ul class="radar__legend" data-anim="stagger">
+        <li><i style="--c:var(--acc)"></i><span>Motion &amp; kinetic type</span><b data-count="96" data-suffix="%">0%</b></li>
+        <li><i style="--c:var(--acc-2)"></i><span>Color grading</span><b data-count="92" data-suffix="%">0%</b></li>
+        <li><i style="--c:var(--acc)"></i><span>Editing &amp; pacing</span><b data-count="90" data-suffix="%">0%</b></li>
+        <li><i style="--c:var(--acc-2)"></i><span>Graphic design</span><b data-count="88" data-suffix="%">0%</b></li>
+        <li><i style="--c:var(--acc)"></i><span>Sound design</span><b data-count="78" data-suffix="%">0%</b></li>
+        <li><i style="--c:var(--acc-2)"></i><span>Brand strategy</span><b data-count="82" data-suffix="%">0%</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ BEHIND THE SCENES ============ -->
+  <section class="bts" id="bts">
+    <div class="bts__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.bts"><em>18</em> Behind the scenes</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.bts.sub">Rigs, timelines and raw passes before they become the final frame. Click any tile to zoom.</p>
+    </div>
+    <div class="bts__grid">
+      <figure class="gal__item bts__item hoverable" data-cursor="view" data-full="assets/img/g3.jpg">
+        <img src="assets/img/g3.jpg" alt="After Effects rig in progress" loading="lazy" />
+        <figcaption><b>Rig</b> Kinetic type build</figcaption>
+      </figure>
+      <figure class="gal__item bts__item hoverable" data-cursor="view" data-full="assets/img/grade-raw.jpg">
+        <img src="assets/img/grade-raw.jpg" alt="Raw ungraded timeline" loading="lazy" />
+        <figcaption><b>Raw</b> Before the grade</figcaption>
+      </figure>
+      <figure class="gal__item bts__item hoverable" data-cursor="view" data-full="assets/img/g6.jpg">
+        <img src="assets/img/g6.jpg" alt="Logo construction sketches" loading="lazy" />
+        <figcaption><b>Sketch</b> Logo on a grid</figcaption>
+      </figure>
+      <figure class="gal__item bts__item hoverable" data-cursor="view" data-full="assets/img/w2.jpg">
+        <img src="assets/img/w2.jpg" alt="Set reference frame" loading="lazy" />
+        <figcaption><b>Ref</b> On-set reference</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ GRADE PLAYGROUND ============ -->
+  <section class="playground" id="playground">
+    <div class="playground__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.playground"><em>19</em> Try a look</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.playground.sub">Same frame, four looks. Tap a preset to see how much a grade can change a mood.</p>
+    </div>
+    <div class="playground__body">
+      <div class="playground__frame">
+        <img src="assets/img/grade-after.jpg" alt="Grade playground preview" id="pgImg" draggable="false" />
+        <span class="playground__tag" id="pgTag">Original</span>
+      </div>
+      <div class="playground__controls" data-anim="stagger">
+        <button class="pg-btn hoverable is-active" data-look="none">Original</button>
+        <button class="pg-btn hoverable" data-look="cinematic">Cinematic teal/orange</button>
+        <button class="pg-btn hoverable" data-look="bleach">Bleach bypass</button>
+        <button class="pg-btn hoverable" data-look="vintage">Vintage film</button>
+        <button class="pg-btn hoverable" data-look="noir">Noir</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section class="resources" id="resources">
+    <div class="resources__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.resources"><em>20</em> Free resources</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.resources.sub">A few things from the pipeline, free to grab — no email required.</p>
+    </div>
+    <div class="resources__grid" data-anim="stagger">
+      <article class="res tilt">
+        <span class="res__badge">Free</span>
+        <span class="res__mono">LUT</span>
+        <h3>Cinematic Teal &amp; Orange pack</h3>
+        <p>6 .cube LUTs built in DaVinci Resolve, tuned for log footage.</p>
+        <a href="#contact" class="res__link hoverable" data-cursor="hide">Get the pack →</a>
+      </article>
+      <article class="res tilt">
+        <span class="res__badge">Free</span>
+        <span class="res__mono">AE</span>
+        <h3>Kinetic type starter rig</h3>
+        <p>Expression-driven After Effects template — swap copy without breaking the animation.</p>
+        <a href="#contact" class="res__link hoverable" data-cursor="hide">Get the template →</a>
+      </article>
+      <article class="res tilt">
+        <span class="res__badge">Free</span>
+        <span class="res__mono">PDF</span>
+        <h3>Pre-production checklist</h3>
+        <p>The exact brief format that keeps a project from stalling in revisions.</p>
+        <a href="#contact" class="res__link hoverable" data-cursor="hide">Get the checklist →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO TESTIMONIALS ============ -->
+  <section class="vwall" id="vtestimonials">
+    <div class="vwall__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.vtestimonials"><em>21</em> Straight from clients</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.vtestimonials.sub">Hit play — sound off by default, tap a card to unmute.</p>
+    </div>
+    <div class="vwall__grid" data-anim="stagger">
+      <article class="vcard" data-media="assets/vid/w1.mp4">
+        <video muted loop playsinline preload="none" poster="assets/img/w2.jpg"></video>
+        <button class="vcard__play hoverable" data-cursor="hide" aria-label="Play testimonial"><i></i></button>
+        <p>“[Add a short real quote from this client.]”</p>
+        <span>[Client name] — [Role, company]</span>
+      </article>
+      <article class="vcard" data-media="assets/vid/w3.mp4">
+        <video muted loop playsinline preload="none" poster="assets/img/w3.jpg"></video>
+        <button class="vcard__play hoverable" data-cursor="hide" aria-label="Play testimonial"><i></i></button>
+        <p>“[Add a short real quote from this client.]”</p>
+        <span>[Client name] — [Role, company]</span>
+      </article>
+      <article class="vcard" data-media="assets/vid/w6.mp4">
+        <video muted loop playsinline preload="none" poster="assets/img/w2.jpg"></video>
+        <button class="vcard__play hoverable" data-cursor="hide" aria-label="Play testimonial"><i></i></button>
+        <p>“[Add a short real quote from this client.]”</p>
+        <span>[Client name] — [Role, company]</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL FEED ============ -->
+  <section class="social" id="social">
+    <div class="social__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.social"><em>22</em> On the feed</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.social.sub">Process clips and finished frames, posted as they ship.</p>
+      <a href="#" class="hoverable social__cta">@rayenchaouch on Instagram →</a>
+    </div>
+    <div class="social__grid" data-anim="stagger">
+      <a href="#" class="social__item hoverable" data-cursor="view"><img src="assets/img/g1.jpg" alt="" loading="lazy" /><span>♥ 214 · 12</span></a>
+      <a href="#" class="social__item hoverable" data-cursor="view"><img src="assets/img/w4.jpg" alt="" loading="lazy" /><span>♥ 340 · 28</span></a>
+      <a href="#" class="social__item hoverable" data-cursor="view"><img src="assets/img/g4.jpg" alt="" loading="lazy" /><span>♥ 189 · 9</span></a>
+      <a href="#" class="social__item hoverable" data-cursor="view"><img src="assets/img/g7.jpg" alt="" loading="lazy" /><span>♥ 276 · 15</span></a>
+      <a href="#" class="social__item hoverable" data-cursor="view"><img src="assets/img/w5.jpg" alt="" loading="lazy" /><span>♥ 401 · 33</span></a>
+      <a href="#" class="social__item hoverable" data-cursor="view"><img src="assets/img/g8.jpg" alt="" loading="lazy" /><span>♥ 158 · 7</span></a>
+    </div>
+  </section>
+
+  <!-- ============ PHILOSOPHY / HOW I WORK ============ -->
+  <section class="values" id="values">
+    <div class="values__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.values"><em>23</em> How I work</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.values.sub">Four things that stay true no matter what the brief is.</p>
+    </div>
+    <div class="values__grid" data-anim="stagger">
+      <article class="value tilt">
+        <span class="value__no">01</span>
+        <h3>Story before style</h3>
+        <p>Motion serves the story, not the other way around — a trick that doesn't earn its frame gets cut before delivery.</p>
+      </article>
+      <article class="value tilt">
+        <span class="value__no">02</span>
+        <h3>One pipeline, no handoffs</h3>
+        <p>Motion, grade and design come from the same person, so nothing gets lost translating a brief between specialists.</p>
+      </article>
+      <article class="value tilt">
+        <span class="value__no">03</span>
+        <h3>Deadlines are a design constraint</h3>
+        <p>A great frame that misses the launch date isn't a great frame — scope gets set to fit the calendar, not the reverse.</p>
+      </article>
+      <article class="value tilt">
+        <span class="value__no">04</span>
+        <h3>Feedback in plain language</h3>
+        <p>No jargon, no gatekeeping the process — you always know why a shot looks the way it looks, and what changing it costs.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ GEAR & WORKSPACE ============ -->
+  <section class="gear" id="gear">
+    <div class="gear__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.gear"><em>24</em> Workspace &amp; gear</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.gear.sub">The hardware and software behind the pipeline, for the curious.</p>
+    </div>
+    <div class="gear__grid" data-anim="stagger">
+      <div class="gear__row">
+        <span class="gear__cat">Edit rig</span>
+        <div><h3>Custom PC — RTX 4070, 64GB RAM</h3><p>Renders a 4K ProRes timeline with full-res previews and zero dropped frames.</p></div>
+      </div>
+      <div class="gear__row">
+        <span class="gear__cat">Monitor</span>
+        <div><h3>Calibrated 4K display + hardware LUT box</h3><p>Every grade is checked against a hardware-calibrated reference before it ships.</p></div>
+      </div>
+      <div class="gear__row">
+        <span class="gear__cat">Control surface</span>
+        <div><h3>DaVinci Resolve grading panel</h3><p>Three trackballs and real dials — faster and more precise than dragging curves with a mouse.</p></div>
+      </div>
+      <div class="gear__row">
+        <span class="gear__cat">Software</span>
+        <div><h3>Adobe Creative Cloud + DaVinci Resolve Studio</h3><p>Full suite, always on the latest stable version, licenses current for every client's NDA requirements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CURRENT QUEUE ============ -->
+  <section class="queue" id="queue">
+    <div class="queue__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.queue"><em>25</em> Currently in the pipeline</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.queue.sub">A live look at what's on the timeline right now.</p>
+    </div>
+    <div class="queue__grid" data-anim="stagger">
+      <article class="qitem">
+        <div class="qitem__top"><h3>Brand campaign — 6 parts</h3><span class="qitem__stage">Grading</span></div>
+        <div class="qitem__bar"><i data-progress="72"></i></div>
+        <p class="qitem__meta">Delivery in 6 days</p>
+      </article>
+      <article class="qitem">
+        <div class="qitem__top"><h3>YouTube documentary — long form</h3><span class="qitem__stage">Motion &amp; VFX</span></div>
+        <div class="qitem__bar"><i data-progress="45"></i></div>
+        <p class="qitem__meta">Delivery in 11 days</p>
+      </article>
+      <article class="qitem">
+        <div class="qitem__top"><h3>Product launch — 3 ratios</h3><span class="qitem__stage">Cut &amp; rhythm</span></div>
+        <div class="qitem__bar"><i data-progress="20"></i></div>
+        <p class="qitem__meta">Delivery in 18 days</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PRESS & MENTIONS ============ -->
+  <section class="press" id="press">
+    <div class="press__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.press"><em>26</em> Press &amp; mentions</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.press.sub">A few places the work has shown up.</p>
+    </div>
+    <div class="press__marquee" aria-hidden="true">
+      <div class="press__row">
+        <span>[PUBLICATION 01]</span><b>◆</b><span>[PUBLICATION 02]</span><b>◆</b><span>[PUBLICATION 03]</span><b>◆</b><span>[PUBLICATION 04]</span><b>◆</b><span>[PUBLICATION 05]</span><b>◆</b>
+        <span>[PUBLICATION 01]</span><b>◆</b><span>[PUBLICATION 02]</span><b>◆</b><span>[PUBLICATION 03]</span><b>◆</b><span>[PUBLICATION 04]</span><b>◆</b><span>[PUBLICATION 05]</span><b>◆</b>
+      </div>
+    </div>
+    <div class="press__quotes" data-anim="stagger">
+      <blockquote class="pquote"><p>"[Add a real press quote here.]"</p><cite>[Publication name]</cite></blockquote>
+      <blockquote class="pquote"><p>"[Add a real press quote here.]"</p><cite>[Publication name]</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- ============ INSTANT ESTIMATE ============ -->
+  <section class="estimate" id="estimate">
+    <div class="estimate__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.estimate"><em>27</em> Get a rough estimate</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.estimate.sub">Pick what fits — this gives a ballpark before we talk specifics.</p>
+    </div>
+    <div class="estimate__body" data-anim="fade">
+      <div class="estimate__group">
+        <span class="estimate__label">Project type</span>
+        <div class="estimate__opts" id="estType">
+          <button class="eg-btn hoverable is-active" data-cursor="hide" data-val="motion" data-price="350">Motion piece</button>
+          <button class="eg-btn hoverable" data-cursor="hide" data-val="grade" data-price="250">Color grade only</button>
+          <button class="eg-btn hoverable" data-cursor="hide" data-val="brand" data-price="450">Brand identity</button>
+          <button class="eg-btn hoverable" data-cursor="hide" data-val="full" data-price="650">Full pipeline</button>
+        </div>
+      </div>
+      <div class="estimate__group">
+        <span class="estimate__label">Length / scope</span>
+        <div class="estimate__opts" id="estScope">
+          <button class="eg-btn hoverable is-active" data-cursor="hide" data-val="short" data-mult="1">Under 60s</button>
+          <button class="eg-btn hoverable" data-cursor="hide" data-val="mid" data-mult="1.4">1–5 min</button>
+          <button class="eg-btn hoverable" data-cursor="hide" data-val="long" data-mult="1.8">5 min +</button>
+        </div>
+      </div>
+      <div class="estimate__group">
+        <span class="estimate__label">Turnaround</span>
+        <div class="estimate__opts" id="estRush">
+          <button class="eg-btn hoverable is-active" data-cursor="hide" data-val="standard" data-mult="1">Standard</button>
+          <button class="eg-btn hoverable" data-cursor="hide" data-val="rush" data-mult="1.35">Rush (48–72h)</button>
+        </div>
+      </div>
+      <div class="estimate__result">
+        <span class="estimate__from">Estimated from</span>
+        <div class="estimate__price"><span>$</span><span id="estValue">350</span></div>
+        <a href="#contact" class="btn magnetic hoverable" data-cursor="hide"><span>Get the exact quote</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GLOBAL REACH ============ -->
+  <section class="reach" id="reach">
+    <div class="reach__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.reach"><em>28</em> Where the work travels</h2>
+      <p data-anim="fade" class="muted" data-i18n="sec.reach.sub">Remote-first and timezone-friendly — clients across three continents.</p>
+    </div>
+    <div class="reach__grid" data-anim="stagger">
+      <div class="reach__cell"><h3 data-count="46" data-suffix="%">0%</h3><p>North Africa &amp; MENA</p></div>
+      <div class="reach__cell"><h3 data-count="31" data-suffix="%">0%</h3><p>Western Europe</p></div>
+      <div class="reach__cell"><h3 data-count="17" data-suffix="%">0%</h3><p>North America</p></div>
+      <div class="reach__cell"><h3 data-count="6" data-suffix="%">0%</h3><p>Rest of the world</p></div>
+    </div>
+    <p class="reach__note muted small" data-anim="fade">Based in Tunis (GMT+1) — daily overlap with Europe, workable hours with the US East Coast and the Gulf.</p>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="ctaband" id="ctaband">
+    <div class="ctaband__track" aria-hidden="true">
+      <span>READY TO MAKE IT MOVE?</span><b>—</b><span>LET'S TALK</span><b>—</b>
+      <span>READY TO MAKE IT MOVE?</span><b>—</b><span>LET'S TALK</span><b>—</b>
+    </div>
+    <a href="#contact" class="ctaband__btn btn btn--big magnetic hoverable" data-cursor="hide"><span>Start a project →</span></a>
+  </section>
+
+  <!-- ============ AVAILABILITY ============ -->
+  <section class="avail" id="availability">
+    <div class="avail__head">
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.availability"><em>29</em> Booking calendar</h2>
+      <p data-anim="fade" class="muted" id="availNext">Checking the next open slot…</p>
+    </div>
+    <div class="avail__strip" id="availStrip" data-anim="stagger"></div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter__inner">
+      <span class="tag" data-anim="fade">30 — Stay in the loop</span>
+      <h2 class="sec-title" data-anim="lines" data-i18n-title="sec.newsletter">Notes before they're public</h2>
+      <p class="muted" data-anim="fade" data-i18n="sec.newsletter.sub">One short email a month — a finished project breakdown, a LUT, or a tool that saved a deadline. No spam, unsubscribe anytime.</p>
+      <form class="nl-form" id="nlForm" novalidate>
+        <input type="email" name="email" placeholder="you@studio.com" required autocomplete="email" />
+        <button type="submit" class="btn magnetic hoverable" data-cursor="hide"><span>Subscribe</span></button>
+      </form>
+      <p class="nl-note" id="nlNote"></p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <span class="tag" data-anim="fade">31 — Contact</span>
+      <h2 class="contact__big">
+        <span class="line"><span class="line__in" data-split>LET'S MAKE</span></span>
+        <span class="line line--alt"><span class="line__in" data-split>IT MOVE</span></span>
+      </h2>
+
+      <div class="contact__grid">
+        <form class="form" id="form" novalidate>
+          <div class="form__row">
+            <label><span data-i18n="contact.name">Name</span><input type="text" name="name" placeholder="Your name" data-i18n-placeholder="contact.name.ph" autocomplete="name" required /></label>
+            <label><span data-i18n="contact.email">Email</span><input type="email" name="email" placeholder="you@studio.com" autocomplete="email" required /></label>
+          </div>
+          <label><span data-i18n="contact.project">Project</span><textarea name="msg" rows="4" placeholder="What are we building?" data-i18n-placeholder="contact.project.ph" required></textarea></label>
+          <button type="submit" class="btn btn--big magnetic hoverable" data-cursor="hide"><span data-i18n="contact.send">Send it</span></button>
+          <p class="form__note" id="formNote"></p>
+        </form>
+
+        <div class="contact__side">
+          <button class="copy hoverable" id="copyMail" data-mail="rayenchaouch42@gmail.com">
+            <span>rayenchaouch42@gmail.com</span><i data-i18n="contact.copy">copy</i>
+          </button>
+          <div class="contact__socials">
+            <a href="#" class="hoverable">Instagram</a>
+            <a href="#" class="hoverable">Behance</a>
+            <a href="#" class="hoverable">YouTube</a>
+            <a href="#" class="hoverable">LinkedIn</a>
+          </div>
+          <p class="muted small" data-i18n="contact.note">Booking projects for the next quarter. Average reply time: a few hours.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>© <i id="year">2026</i> Rayen Chaouch</span>
+      <span data-i18n="foot.role">Motion · Graphic · Grade</span>
+      <a href="#top" class="hoverable" data-i18n="foot.top">Back to top ↑</a>
+    </footer>
+  </section>
+
+</main>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" id="lb" aria-hidden="true">
+  <button class="lb__close hoverable" id="lbClose" aria-label="Close">close</button>
+  <img id="lbImg" alt="" />
+</div>
+
+<!-- ============ SCROLL TO TOP ============ -->
+<button class="totop hoverable" id="toTop" data-cursor="hide" aria-label="Back to top">
+  <svg viewBox="0 0 44 44" aria-hidden="true">
+    <circle class="totop__bg" cx="22" cy="22" r="20"></circle>
+    <circle class="totop__ring" id="toTopRing" cx="22" cy="22" r="20"></circle>
+  </svg>
+  <i></i>
+</button>
+
+<!-- libraries are vendored locally: works offline, from file:// and behind ad-blockers -->
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
